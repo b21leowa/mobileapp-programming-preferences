@@ -15,7 +15,7 @@ public class SecondActivity extends AppCompatActivity {
     EditText editText;
     private SharedPreferences prefs;
     private SharedPreferences.Editor editPrefs;
-    String value = "Change this text";
+    String value;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

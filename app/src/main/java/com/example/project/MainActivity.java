@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         editTextButton = findViewById(R.id.changeTitle);
         titleEdit = findViewById(R.id.editThisText);
 
-        prefs = getSharedPreferences("test", MODE_PRIVATE);
-        titleEdit.setText(prefs.getString("value", "Change this Text!"));
+        titleEdit.setText("Edit this title");
 
         editTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,4 +39,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        prefs = getSharedPreferences("test", MODE_PRIVATE);
+        titleEdit.setText(prefs.getString("value", "Change this Text!"));
+    }
 }

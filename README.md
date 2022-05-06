@@ -12,7 +12,7 @@ When the button is pressed it did not change the value directly, the program had
 So instead of having titleEdit.setText and prefs i added it in the onResume() method instead. Now the title edits meanwhile the program is running.
 See code snippet.
 
-````Java
+```Java
 //Second Activity
  mainAction.setOnClickListener(new View.OnClickListener() {
             @Override
